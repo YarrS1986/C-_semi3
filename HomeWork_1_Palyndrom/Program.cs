@@ -14,21 +14,29 @@ Console.Clear();
 Console.Write("введи число = ");
 string num = Console.ReadLine();
 int len = num.Length;
+int value = int.Parse(num);
 
-int i = 0;
-while (i < len / 2)
+if (value > 9999 && value < 100000)
 {
-    if (num[i] == num[len - 1 - i])
+    int i = 0;
+    while (i < len / 2)
     {
-        Console.WriteLine("полиндром");
-        i++;
-    }
-    else
-    {
-        Console.WriteLine("не полиндром");
-        break;
+        if (num[i] == num[len - 1 - i])
+        {
+            Console.WriteLine("полиндром");
+            i++;
+        }
+        else
+        {
+            Console.WriteLine("не полиндром");
+            break;
+        }
     }
 }
+else Console.WriteLine("введи верное число!");
+
+
+
 //for (int i = 0; i < len / 2; i++)
 
 
